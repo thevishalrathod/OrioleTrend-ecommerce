@@ -57,7 +57,7 @@ export const loginUser = async (req, res) => {
         id: checkUser._id,
         role: checkUser.role,
         email: checkUser.email,
-        userName: checkUser.userName, 
+        userName: checkUser.userName,
       },
       "CLIENT_SECRET_KEY",
       { expiresIn: "60m" }
@@ -84,6 +84,7 @@ export const loginUser = async (req, res) => {
 //Logout
 
 export const logoutUser = (req, res) => {
+  console.log("loogout");
   res
     .clearCookie("token")
     .json({ success: true, message: "Logged out successfuly" });

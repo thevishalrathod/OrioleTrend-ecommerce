@@ -4,12 +4,15 @@ import { Button } from "../ui/button";
 import { AlignJustify, LogOut } from "lucide-react";
 import { useDispatch } from "react-redux";
 import { logoutUser } from "@/store/auth-slice";
+import { useNavigate } from "react-router-dom";
 
 const AdminHeader = ({ setOpen }) => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleLogout = () => {
     dispatch(logoutUser());
+    navigate("/shop/home");
   };
 
   return (
@@ -25,7 +28,7 @@ const AdminHeader = ({ setOpen }) => {
           className="inline-flex gap-2 items-center rounded-md px-4 py-2 text-sm font-medium shadow-lg"
         >
           <LogOut />
-          Loguot
+          Logout
         </Button>
       </div>
     </header>

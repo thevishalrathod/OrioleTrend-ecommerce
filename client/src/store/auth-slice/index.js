@@ -31,6 +31,7 @@ export const loginUser = createAsyncThunk("/auth/login", async (formData) => {
 });
 
 export const logoutUser = createAsyncThunk("/auth/logout", async () => {
+  console.log("Inside logout slice");
   const response = await axios.post(
     `${import.meta.env.VITE_API_URL}/api/auth/logout`,
     {},

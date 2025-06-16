@@ -15,6 +15,8 @@ export const imageUploadUtil = async (file) => {
     resource_type: "auto",
   });
 
+  console.log("Result: ", result);
+
   return result;
 };
 
