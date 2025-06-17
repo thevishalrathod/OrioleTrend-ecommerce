@@ -49,7 +49,7 @@ const AdminOrdersView = () => {
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead>Order ID</TableHead>
+              <TableHead className="w-[100px]">Order ID</TableHead>
               <TableHead>Order Date</TableHead>
               <TableHead>Order Status</TableHead>
               <TableHead>Order Price</TableHead>
@@ -78,9 +78,13 @@ const AdminOrdersView = () => {
             </TableRow> */}
             {orderList && orderList.length > 0
               ? orderList.map((orderItem) => (
-                  <TableRow>
-                    <TableCell>{orderItem?._id}</TableCell>
-                    <TableCell>{orderItem?.orderDate.split("T")[0]}</TableCell>
+                  <TableRow key={orderItem?._id}>
+                    <TableCell className="font-medium">
+                      {orderItem?._id}
+                    </TableCell>
+                    <TableCell className="">
+                      {orderItem?.orderDate.split("T")[0]}
+                    </TableCell>
                     <TableCell>
                       <Badge
                         className={`py-1 px-3 ${
