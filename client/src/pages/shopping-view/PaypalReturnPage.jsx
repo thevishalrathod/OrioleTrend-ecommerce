@@ -22,7 +22,9 @@ const PaypalReturnPage = () => {
         console.log("DATA IN capturePayment: ", data);
         if (data?.payload?.success) {
           sessionStorage.removeItem("currentOrderId");
-          window.location.href = "/shop/payment-success";
+          window.location.href = `${
+            import.meta.env.CLIENT_API_URL
+          }/shop/payment-success`;
         }
       });
     }
