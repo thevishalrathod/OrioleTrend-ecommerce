@@ -91,6 +91,8 @@ const ShoppingCheckout = () => {
     });
   }
 
+  console.log("APPROVAL URL: ", approvalURL);
+
   if (approvalURL) {
     window.location.href = approvalURL;
   }
