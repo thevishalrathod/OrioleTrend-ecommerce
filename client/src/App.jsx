@@ -40,6 +40,7 @@ function App() {
       <Skeleton className="lg:h-[500px] md:h-[300px] sm:h-screen w-[] m-4 bg-slate-300 flex items-center justify-center" />
     );
 
+  console.log("APP.JSX");
   return (
     <>
       <div className="flex flex-col overflow-hidden bg-white">
@@ -108,7 +109,7 @@ function App() {
             />
             <Route path="paypal-return" element={<PaypalReturnPage />} />
             <Route path="payment-success" element={<PaymentSuccessPage />} />
-            <Route path="payment-demo" element={<PaypalDemo />} />
+            <Route path="/paypal-demo" element={<PaypalDemo />} />
           </Route>
 
           {/* Page not found route */}
