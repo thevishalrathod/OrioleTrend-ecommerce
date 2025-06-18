@@ -109,7 +109,7 @@ function App() {
             />
             <Route path="paypal-return" element={<PaypalReturnPage />} />
             <Route path="payment-success" element={<PaymentSuccessPage />} />
-            <Route path="/paypal-demo" element={<PaypalDemo />} />
+            <Route path="paypal-demo" element={<PaypalDemo />} />
           </Route>
 
           {/* Page not found route */}
