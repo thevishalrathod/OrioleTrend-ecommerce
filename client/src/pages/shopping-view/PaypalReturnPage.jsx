@@ -11,11 +11,15 @@ const PaypalReturnPage = () => {
   const paymentId = params.get("paymentId");
   const payerId = params.get("PayerID");
 
+  console.log("PAYMENT ID: ", paymentId);
+  console.log("PAYER ID: ", payerId);
+
   useEffect(() => {
     if (paymentId && payerId) {
       const orderId = JSON.parse(sessionStorage.getItem("currentOrderId"));
 
       dispatch(capturePayment({ paymentId, payerId, orderId })).then((data) => {
+        console.log("DATA IN capturePayment: ", data);
         if (data?.payload?.success) {
           sessionStorage.removeItem("currentOrderId");
           window.location.href = "/shop/payment-success";

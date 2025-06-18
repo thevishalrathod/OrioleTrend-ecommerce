@@ -9,7 +9,6 @@ const initialState = {
 export const addFeatureImage = createAsyncThunk(
   "/feature/addFeatureImage",
   async (image) => {
-    console.log("IMAGE IN SLICE: ", image);
     const response = await axios.post(
       `${import.meta.env.VITE_API_URL}/api/common/feature/add`,
       { image }

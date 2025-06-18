@@ -28,11 +28,11 @@ const AuthRegister = () => {
       } else {
         toast(data?.payload?.message);
       }
-      console.log("Data : ", data);
+      // console.log("Data : ", data);
     });
   };
 
-  console.log(formData);
+  // console.log(formData);
 
   return (
     <div className="mx-auto w-full max-w-md space-y-6">

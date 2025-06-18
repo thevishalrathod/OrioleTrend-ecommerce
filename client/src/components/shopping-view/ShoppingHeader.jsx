@@ -31,7 +31,7 @@ const MenuItems = () => {
   const [searchParams, setSearchParams] = useSearchParams();
 
   function handleNavigate(getCurrentMenuItem) {
-    console.log("get current menu item: ", getCurrentMenuItem);
+    // console.log("get current menu item: ", getCurrentMenuItem);
 
     sessionStorage.removeItem("filters");
     const currentFilter =
@@ -43,7 +43,7 @@ const MenuItems = () => {
           }
         : null;
 
-    console.log("current filter: ", currentFilter);
+    // console.log("current filter: ", currentFilter);
 
     sessionStorage.setItem("filters", JSON.stringify(currentFilter));
 

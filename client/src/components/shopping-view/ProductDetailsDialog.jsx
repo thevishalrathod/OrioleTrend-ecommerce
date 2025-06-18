@@ -119,7 +119,7 @@ const ProductDetailsDialog = ({ open, setOpen, productDetails }) => {
         reviews.length
       : 0;
 
-  console.log(" REVIEWS: ", reviews);
+  // console.log(" REVIEWS: ", reviews);
 
   return (
     <Dialog open={open} onOpenChange={handleDialogClose}>

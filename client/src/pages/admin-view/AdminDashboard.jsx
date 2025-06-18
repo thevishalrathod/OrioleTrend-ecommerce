@@ -12,7 +12,7 @@ const AdminDashboard = () => {
   const dispatch = useDispatch();
   const { featureImageList } = useSelector((state) => state.commonFeature);
 
-  console.log("UPLOADED IMAGE URL: ", uploadedImageUrl);
+  // console.log("UPLOADED IMAGE URL: ", uploadedImageUrl);
 
   function handleUploadFeatureImage() {
     dispatch(addFeatureImage(uploadedImageUrl)).then((data) => {
@@ -29,7 +29,7 @@ const AdminDashboard = () => {
     dispatch(getFeatureImages());
   }, [dispatch]);
 
-  console.log("FEATURE IMAGES LIST: ", featureImageList);
+  // console.log("FEATURE IMAGES LIST: ", featureImageList);
 
   return (
     <div className="">

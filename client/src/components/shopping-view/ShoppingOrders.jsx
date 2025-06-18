@@ -39,7 +39,7 @@ const ShoppingOrders = () => {
     }
   }, [orderDetails]);
 
-  console.log("Order Details: ", orderDetails);
+  // console.log("Order Details: ", orderDetails);
 
   return (
     <Card>

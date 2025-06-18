@@ -1,4 +1,4 @@
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import img from "../../assets/images/account.jpg";
 import Address from "@/components/shopping-view/Address";
 import { useDispatch, useSelector } from "react-redux";
@@ -79,7 +79,7 @@ const ShoppingCheckout = () => {
       payerId: "",
     };
 
-    console.log("Order data: ", orderData);
+    // console.log("Order data: ", orderData);
 
     dispatch(createNewOrder(orderData)).then((data) => {
       // console.log("Data by dispatch: ", data);

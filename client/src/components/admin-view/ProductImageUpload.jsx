@@ -19,7 +19,7 @@ const ProductImageUpload = ({
   const inputRef = useRef(null);
 
   const handleImageFileChange = (event) => {
-    console.log(event.target.files);
+    // console.log(event.target.files);
     const selectedFile = event.target.files?.[0];
     if (selectedFile) setImageFile(selectedFile);
   };
@@ -30,7 +30,7 @@ const ProductImageUpload = ({
 
   const handleDrop = (event) => {
     event.preventDefault();
-    console.log(event.dataTransfer.files);
+    // console.log(event.dataTransfer.files);
     const droppedFile = event.dataTransfer.files?.[0];
     if (droppedFile) setImageFile(droppedFile);
   };
@@ -42,7 +42,7 @@ const ProductImageUpload = ({
     }
   };
 
-  console.log("Iamgefile: ", imageFile);
+  // console.log("Iamgefile: ", imageFile);
 
   const uploadImageToCloudinary = async () => {
     setImageLoadingState(true);
@@ -53,7 +53,7 @@ const ProductImageUpload = ({
       data
     );
 
-    console.log("response.data:- ", response.data);
+    // console.log("response.data:- ", response.data);
 
     if (response.data?.success) {
       setUploadedImageUrl(response.data.result.url);

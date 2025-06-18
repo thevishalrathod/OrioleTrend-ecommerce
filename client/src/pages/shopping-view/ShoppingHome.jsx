@@ -123,7 +123,7 @@ const ShoppingHome = () => {
     dispatch(getFeatureImages());
   }, [dispatch]);
 
-  console.log("Product list: ", productList);
+  // console.log("Product list: ", productList);
 
   return (
     <div className="flex flex-col min-h-screen">

@@ -8,7 +8,7 @@ import { useSelector } from "react-redux";
 const ShoppingOrderDetailsView = ({ orderDetails }) => {
   const { user } = useSelector((state) => state.auth);
 
-  console.log("user: ", user);
+  // console.log("user: ", user);
 
   return (
     <DialogContent className="sm:max-w-[600px] max-h-[550px] overflow-auto">
