@@ -23,6 +23,7 @@ import { Skeleton } from "./components/ui/skeleton";
 import PaypalReturnPage from "./pages/shopping-view/PaypalReturnPage";
 import PaymentSuccessPage from "./pages/shopping-view/PaymentSuccessPage";
 import SearchProducts from "./pages/shopping-view/SearchProducts";
+import PaypalDemo from "./pages/shopping-view/PaypalDemo";
 
 function App() {
   const { user, isAuthenticated, isLoading } = useSelector(
@@ -85,31 +86,29 @@ function App() {
           </Route>
 
           {/* Shopping Routes */}
-          <Route
-            path="/shop"
-            element={<ShoppingLayout />}
-          >
+          <Route path="/shop" element={<ShoppingLayout />}>
             <Route path="home" element={<ShoppingHome />} />
             <Route path="listing" element={<ShoppingListing />} />
             <Route path="search" element={<SearchProducts />} />
-            <Route 
-              path="checkout" 
+            <Route
+              path="checkout"
               element={
                 <CheckAuth isAuthenticated={isAuthenticated} user={user}>
                   <ShoppingCheckout />
                 </CheckAuth>
-              } 
+              }
             />
-            <Route 
-              path="account" 
+            <Route
+              path="account"
               element={
                 <CheckAuth isAuthenticated={isAuthenticated} user={user}>
                   <ShoppingAccount />
                 </CheckAuth>
-              } 
+              }
             />
             <Route path="paypal-return" element={<PaypalReturnPage />} />
             <Route path="payment-success" element={<PaymentSuccessPage />} />
+            <Route path="payment-demo" element={<PaypalDemo />} />
           </Route>
 
           {/* Page not found route */}
@@ -122,4 +121,3 @@ function App() {
 }
 
 export default App;
-
